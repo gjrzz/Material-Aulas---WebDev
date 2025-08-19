@@ -64,6 +64,18 @@ function addPost(event) {
         image: postImage, 
         date: postDate 
     };
+
+    function handleClick(infosDoEvento){
+        const acaoBotao = infosDoEvento.target.dataset.action;
+        const indicePost = infosDoEvento.target.dataset.index;
+
+        if(!acaoBotao) return;
+
+        if(acaoBotao === 'Editor'){
+            console.log('Editou!')
+        }else if (acaoBotao === 'Apagar'){
+            console.log('Apagou')
+        }
     
     posts.unshift(post);
     
